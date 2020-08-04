@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Calendar</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<style>
+    .thick-border {
+        border-width: 10px !important;
+    }
+    
+    .border-top-dashed {
+        border-top-style: dashed !important;
+    }
+    
+    input:focus {
+        outline: none;
+    }
+    
+    .bg-grey-light {
+        background-color: #DADBD6;
+    }
+    
+    .border-left-blue {
+        border-left-color: #010a6e !important;
+    }
+    
+    .margin-bottom-big {
+        margin-bottom: 200px;
+    }
+    
+    .bold {
+        font-weight: 500;
+    }
+    
+    .pointer {
+        cursor: pointer;
+    }
+    
+    .pointer:hover {
+        background-color: #007bff !important;
+    }
+</style>
+
+<body>
+    <div class="container-fluid px-0 margin-bottom-big overflow-hidden">
+        <div class="row">
+            <div class="col-12">
+                <div class="pb-5 border-bottom border-dark thick-border mb-4 pt-5">
+                    <h1 class="display-2 text-center bold">
+                        Work Day Scheduler
+                    </h1>
+                    <h5 class="text-center"> A simple Calendar app for scheduling your work day</h5>
+                    <h5 id="today-header" class="text-center"></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1 "></div>
+            <div class="col-1 border p-3 border-left-0 border-bottom-0 border-dark border-top-dashed ">
+                9AM
+            </div>
+            <div class="col-8 border bg-grey-light border-white border-left-0 border-right-0 border-bottom-0 ">
+                <input type="text" data-hour='hour-9' class="w-100 h-100 border-0 bg-grey-light " />
+            </div>
+            <div class="col-1 pointer save-time border-left-blue rounded-right border d-flex justify-content-center align-items-center bg-info ">
+                <i class="fa fa-lock text-white " aria-hidden="true "></i>
+            </div>
+            <div class="col-1 "></div>
+        </div>
+        <div class="row">
+            <div class="col-1 "></div>
+            <div class="col-1 border p-3 border-left-0 border-bottom-0 border-dark border-top-dashed ">
+                10AM
+            </div>
+            <div class="col-8 border bg-grey-light border-white border-left-0 border-right-0 border-bottom-0 ">
+                <input type="text" data-hour='hour-10' class="w-100 h-100 border-0 bg-grey-light " />
+            </div>
+            <div class="col-1 pointer save-time border-left-blue rounded-right border d-flex justify-content-center align-items-center bg-info ">
+                <i class="fa fa-lock text-white " aria-hidden="true "></i>
+            </div>
+            <div class="col-1 "></div>
+        </div>
+        <div class="row">
+            <div class="col-1 "></div>
+            <div class="col-1 border p-3 border-left-0 border-bottom-0 border-dark border-top-dashed ">
+                11AM
+            </div>
+            <div class="col-8 border bg-grey-light border-white border-left-0 border-right-0 border-bottom-0 ">
+                <input type="text" data-hour='hour-11' class="w-100 h-100 border-0 bg-grey-light " />
+            </div>
+            <div class="col-1 pointer save-time border-left-blue rounded-right border d-flex justify-content-center align-items-center bg-info ">
+                <i class="fa fa-lock text-white " aria-hidden="true "></i>
+            </div>
+            <div class="col-1 "></div>
+        </div>
+        <div class="row">
+            <div class="col-1 "></div>
+            <div class="col-1 border p-3 border-left-0 border-bottom-0 border-dark border-top-dashed ">
+                12PM
+            </div>
+            <div class="col-8 border bg-grey-light border-white border-left-0 border-right-0 border-bottom-0 ">
+                <input type="text" data-hour='hour-12' class="w-100 h-100 border-0 bg-grey-light " />
+            </div>
+            <div class="col-1 pointer save-time border-left-blue rounded-right border d-flex justify-content-center align-items-center bg-info ">
+                <i class="fa fa-lock text-white " aria-hidden="true "></i>
+            </div>
+            <div class="col-1 "></div>
+        </div>
+        <div class="row">
+            <div class="col-1 "></div>
+            <div class="col-1 border p-3 border-left-0 border-bottom-0 border-dark border-top-dashed ">
+                1PM
+            </div>
+            <div class="col-8 border bg-grey-light border-white border-left-0 border-right-0 border-bottom-0 ">
+                <input type="text" data-hour='hour-1' class="w-100 h-100 border-0 bg-grey-light " />
+            </div>
+            <div class="col-1 pointer save-time border-left-blue rounded-right border d-flex justify-content-center align-items-center bg-info ">
+                <i class="fa fa-lock text-white " aria-hidden="true "></i>
+            </div>
+            <div class="col-1 "></div>
+        </div>
+        <div class="row">
+            <div class="col-1 "></div>
+            <div class="col-1 border p-3 border-left-0 border-bottom-0 border-dark border-top-dashed ">
+                2PM
+            </div>
+            <div class="col-8 border bg-grey-light border-white border-left-0 border-right-0 border-bottom-0 ">
+                <input type="text" data-hour='hour-2' class="w-100 h-100 border-0 bg-grey-light " />
+            </div>
+            <div class="col-1 pointer save-time border-left-blue rounded-right border d-flex justify-content-center align-items-center bg-info ">
+                <i class="fa fa-lock text-white " aria-hidden="true "></i>
+            </div>
+            <div class="col-1 "></div>
+        </div>
+        <div class="row">
+            <div class="col-1 "></div>
+            <div class="col-1 border p-3 border-left-0 border-bottom-0 border-dark border-top-dashed ">
+                3PM
+            </div>
+            <div class="col-8 border bg-grey-light border-white border-left-0 border-right-0 border-bottom-0 ">
+                <input type="text" data-hour='hour-3' class="w-100 h-100 border-0 bg-grey-light " />
+            </div>
+            <div class="col-1 pointer save-time border-left-blue rounded-right border d-flex justify-content-center align-items-center bg-info ">
+                <i class="fa fa-lock text-white " aria-hidden="true "></i>
+            </div>
+            <div class="col-1 "></div>
+        </div>
+        <div class="row">
+            <div class="col-1 "></div>
+            <div class="col-1 border p-3 border-left-0 border-bottom-0 border-dark border-top-dashed ">
+                4PM
+            </div>
+            <div class="col-8 border bg-grey-light border-white border-left-0 border-right-0 border-bottom-0 ">
+                <input type="text" data-hour='hour-4' class="w-100 h-100 border-0 bg-grey-light " />
+            </div>
+            <div class="col-1 pointer save-time border-left-blue rounded-right border d-flex justify-content-center align-items-center bg-info ">
+                <i class="fa fa-lock text-white " aria-hidden="true "></i>
+            </div>
+            <div class="col-1 "></div>
+        </div>
+        <div class="row">
+            <div class="col-1 "></div>
+            <div class="col-1 border p-3 border-left-0 border-bottom-0 border-dark border-top-dashed ">
+                5PM
+            </div>
+            <div class="col-8 border bg-grey-light border-white border-left-0 border-right-0 border-bottom-0 ">
+                <input type="text" data-hour='hour-5' class="w-100 h-100 border-0 bg-grey-light " />
+            </div>
+            <div class="col-1 pointer save-time border-left-blue rounded-right border d-flex justify-content-center align-items-center bg-info ">
+                <i class="fa fa-lock text-white " aria-hidden="true "></i>
+            </div>
+            <div class="col-1 "></div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js " integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1 " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script>
+        //populate today's date
+        $('#today-header').text(moment().format('dddd, MMMM Do'));
+
+        //save the hour notes in local storage
+        // $(document).on('click', '.save-time', function(){
+
+        // });
+
+        $('.save-time').click(function() {
+            let input = $(this).parent().find('input');
+            let inputValue = input.val();
+            if (inputValue == '') {
+                return;
+            }
+            let key = input.data('hour');
+            localStorage.setItem(key, inputValue);
+        });
+
+        //auto populate the hour notes
+        let hourKeys = [
+            'hour-9',
+            'hour-10',
+            'hour-11',
+            'hour-12',
+            'hour-1',
+            'hour-2',
+            'hour-3',
+            'hour-4',
+            'hour-5'
+        ];
+        for (let i = 0; i < hourKeys.length; i++) {
+            let inputNote = localStorage.getItem(hourKeys[i]);
+            if (typeof inputNote == 'undefined') {
+                continue;
+            }
+            $('*[data-hour="' + hourKeys[i] + '"]').val(inputNote);
+        }
+    </script>
+</body>
+
+</html>
